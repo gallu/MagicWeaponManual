@@ -26,6 +26,11 @@ modelをもうちょっと継承してみる
 	modelの継承ルートを変えて動かしてみる
 	わざわざ継承クラスを増やす意味
 
+一般的なPHPフレームワークとの対比
+	MVCの用い方の違い
+	一般的な「controller+action」をMagicWeaponのmodelに落とす方法一案
+	mod_rewrite周り：URIからの推測について
+
 mapファイルについて
 	わざわざ明示する理由
 	応用編：静的なPage群の出力方法
