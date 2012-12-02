@@ -41,6 +41,7 @@ DBにつなげてみる
 		設定(db.conf)
 		メソッド(model#get_db())
 	とりあえずvar_dumpあたりで確認してみる
+	文字化けするときの対策：プログラム側関数で片付けず、Mysqlのclientの設定で片付けましょう
 
 MagicWeaponにおけるDBアクセスの考え方
 	「PKを取得するSQL」と「１レコードを取得するdata_clump」というやり方について
@@ -65,6 +66,11 @@ DIの話
 
 管理画面を作ってみる
 	認証の作られ方
+		authenticationのMW的基本実装
+		autholizationのMW的基本実装
+		authenticationの実装オプション
+		autholizationをPHP sessionで実装する
+		autholizationの実装その他
 
 「認証してもしなくてもよい」画面の作成
 
