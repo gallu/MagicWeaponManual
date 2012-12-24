@@ -48,8 +48,17 @@ DBにつなげてみる
 	とりあえずvar_dumpあたりで確認してみる
 	文字化けするときの対策：プログラム側関数で片付けず、Mysqlのclientの設定で片付けましょう
 
+KVSにつなげてみる
+	KVSハンドルの取得方法
+
 MagicWeaponにおけるDBアクセスの考え方
 	「PKを取得するSQL」と「１レコードを取得するdata_clump」というやり方について
+
+データを持ちまわる
+	sessionとbagの違い
+	modelにあるbag
+	mw_area_setting(推奨できるかは微妙だけど)
+	sessionでのデータの持ち回り
 
 data_clumpについて簡単に
 	もともとの出来た経緯
@@ -59,12 +68,15 @@ data_clumpについて簡単に
 いわゆる「入力→確認→完了」の作り方
 	画面遷移の流れ
 	data_clumpにvalidateをしてもらう
+	基本のvalidateでは対応しきれない時は？
 	テンプレートにエラーメッセージを書く
 
 data_clumpについてもうちょいと
 	項目の追加の仕方
 	「データにまつわる処理」はここに集めましょう的な話
 	テンプレートエンジンとの連携関連
+	memcachedを使ってみる：data_clump.conf
+	insertとupdateで異なるvalidateをする
 
 DIの話
 	DIっつかファクトリーなんだけどねぇ、的な話
