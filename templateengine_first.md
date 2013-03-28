@@ -8,8 +8,8 @@
 ただまぁ現場でのSmarty勢の勢いには壮絶なものもあり。まぁSmartyも「ちゃんとルールを守って最低限の使用にとどめれば」それなりに便利なので、Smarty用の設定について少しふれてみます。
 
 なお、詳細なソースは適宜gitの中をご確認ください。    
-CONV対応ソース： <>    
-Smarty対応ソース： <>    
+CONV対応ソース： <https://github.com/gallu/MagicWeaponManual/tree/master/HelloWorldConv>    
+Smarty対応ソース： <https://github.com/gallu/MagicWeaponManual/tree/master/HelloWorldSmarty>    
 
 ## CONVの場合の設定と実行
 ### framework側設定
