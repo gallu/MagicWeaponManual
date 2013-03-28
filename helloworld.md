@@ -155,10 +155,10 @@ libディレクトリの中に、mw_index.incってファイル名で作成を�
 ##表示してみる
 DocumentRootを適切にみつつ、確認をしてみてください。
 
-たぶん時々不意のメンテナンスをしていますが、そうでないタイミングなら、以下のURIで見ていただくことも可能です。
+たぶん時々不意のメンテナンスをしていますが、そうでないタイミングなら、以下のURIで見ていただくことも可能です。    
 <http://www.m-fr.net/MagicWeaponManual/HelloWorld/index.php>
 
-なお、上述一式は、githubの中にあるので、動かない場合は適宜見比べるなりdiffるなり目diffるなりしてみてください。
+なお、上述一式は、githubの中にあるので、動かない場合は適宜見比べるなりdiffるなり目diffるなりしてみてください。    
 <https://github.com/gallu/MagicWeaponManual/tree/master/HelloWorld>
 
 
