@@ -94,5 +94,9 @@ Smartyの書式そのまんまですが。
 
     {$message}
 
+### サンプル
+<http://www.m-fr.net/MagicWeaponManual/HelloWorldSmarty/>
+
+
 ## その他のテンプレートエンジン
 まだ未対応なんですが、たぶん対応はそんなに厄介でもないので。なんか「これ対応して～」ってのがあったらご連絡いただければ。
