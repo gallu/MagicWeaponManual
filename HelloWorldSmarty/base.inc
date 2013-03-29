@@ -16,9 +16,11 @@ set_include_path(get_include_path() . PATH_SEPARATOR . $dir);
 
 // 基本的なphp.iniの設定各種
 require_once('mw_set_ini.inc');
+// タイムゾーンの設定
+date_default_timezone_set('Asia/Tokyo');
 
 // 基準ディレクトリの設定
-$bp = '/home/furu/work/MagicWeaponManual/HelloWorld/';
+$bp = '/home/furu/work/MagicWeaponManual/HelloWorldSmarty/';
 
 // configファイル名
 $config       = $bp . 'conf/config.conf';

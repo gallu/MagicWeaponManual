@@ -9,3 +9,10 @@
 * テンプレートエンジン使ってHello World    
 <https://github.com/gallu/MagicWeaponManual/blob/master/templateengine_first.md>
 
+* modelをもうちょっと継承してみる    
+<https://github.com/gallu/MagicWeaponManual/blob/master/more_extends_model.md>
+
+* mapファイルについて    
+<https://github.com/gallu/MagicWeaponManual/blob/master/about_mapfile.md>
+
+
