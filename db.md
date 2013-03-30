@@ -48,7 +48,7 @@ db.confにはこんな風に書いておきます。db.confって名前なのは
     host = localhost
     #port = 
 サンプルコード：    
-<https://github.com/gallu/MagicWeaponManual/tree/master/HelloWorldDbOld>
+<https://github.com/gallu/MagicWeaponManual/tree/master/DbOld>
 
 接続にPDOを使ってmysqlにつなげる場合
     # DB設定
@@ -59,7 +59,7 @@ db.confにはこんな風に書いておきます。db.confって名前なのは
     host = localhost
     #port = 
 サンプルコード：    
-<https://github.com/gallu/MagicWeaponManual/tree/master/HelloWorldDb>
+<https://github.com/gallu/MagicWeaponManual/tree/master/Db>
 
 PostgreSQLは一時期対応していたのですが、最近全然扱わない＆少し修正が入ってるので、ぶっちゃけ「動くかどうか」も不明です。
 

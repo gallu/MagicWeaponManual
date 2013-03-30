@@ -14,7 +14,7 @@ set_include_path(get_include_path() . PATH_SEPARATOR . $dir);
 require_once('mw_set_ini.inc');
 
 // 基準ディレクトリの設定
-$bp = '/home/furu/work/MagicWeaponManual/HelloWorldDbOld/';
+$bp = '/home/furu/work/MagicWeaponManual/Db/';
 
 // configファイル名
 $config       = $bp . 'conf/config.conf';

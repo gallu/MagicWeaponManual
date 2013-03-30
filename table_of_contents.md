@@ -18,4 +18,7 @@
 * DBにつなげてみる    
 <https://github.com/gallu/MagicWeaponManual/blob/master/db.md>
 
+* SQL文を発行する
+<https://github.com/gallu/MagicWeaponManual/blob/master/sql.md>
+
 

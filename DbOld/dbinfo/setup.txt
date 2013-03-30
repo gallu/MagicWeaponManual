@@ -1,0 +1,3 @@
+create database mw_db_test;
+grant ALTER, CREATE, DELETE, DROP, INDEX, INSERT, LOCK TABLES, SELECT, UPDATE on mw_db_test.* to 'mw_db_test'@'localhost' identified by 'Wv[I[:6aBH#Oj57a';
+flush privileges ;
