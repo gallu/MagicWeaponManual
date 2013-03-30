@@ -15,4 +15,7 @@
 * mapファイルについて    
 <https://github.com/gallu/MagicWeaponManual/blob/master/about_mapfile.md>
 
+* DBにつなげてみる    
+<https://github.com/gallu/MagicWeaponManual/blob/master/db.md>
+
 

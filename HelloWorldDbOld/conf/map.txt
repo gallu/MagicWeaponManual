@@ -1,0 +1,2 @@
+# top page
+index     =  mw_index.inc:mw_index index.tpl
