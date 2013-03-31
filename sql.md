@@ -172,7 +172,7 @@ queryメソッドのreturnにはNULLが帰ってくるんで、dbハンドルに
 
 ## サンプルの場所
 プリペアドステートメント使用    
-<>
+<https://github.com/gallu/MagicWeaponManual/tree/master/Db2>
 
 エスケープ処理使用    
-<>
+<https://github.com/gallu/MagicWeaponManual/tree/master/DbOld2>
