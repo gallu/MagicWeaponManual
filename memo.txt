@@ -31,7 +31,6 @@ mapファイルについて
 	わざわざ明示する理由
 	応用編：静的なPage群の出力方法
 
------------------------------
 DBにつなげてみる
 	DBハンドルの取得方法
 		設定(db.conf)
@@ -39,42 +38,36 @@ DBにつなげてみる
 	とりあえずvar_dumpあたりで確認してみる
 	文字化けするときの対策：プログラム側関数で片付けず、Mysqlのclientの設定で片付けましょう
 
---------------
+-----------------------XXXXXXXXXXXXXXXXXXXXXXXXXXXX
 KVSにつなげてみる
 	KVSハンドルの取得方法
+	「複数のmemcached」の接続
+kvs_config_wbp = conf/kvs.conf
 
-開発環境とステージング環境と本番環境を切り替える
-	切り替え方の提案：シンボリックリンクによる切り替え
-	どのconfigをどんな風に分離するか
-	configの書式、特に@includeについて
-	切り替えて動かす
+type = memcache
+server = localhost:11211:1
+server = localhost:11222:1
 
-MagicWeaponにおけるDBアクセスの考え方
-	ORMは使わないよ、的な
-	「PKを取得するSQL」と「１レコードを取得するdata_clump」というやり方について
-
-データを持ちまわる
-	sessionとbagの違い
-	modelにあるbag
-	mw_area_setting(推奨できるかは微妙だけど)
-	sessionでのデータの持ち回り
 
 data_clumpについて簡単に
 	もともとの出来た経緯
 	data_clumpの作り方：コマンド使うと楽よん、的な
 	使い方：formからの取得についてとDBアクセス関連
 
-一般的なPHPフレームワークとの対比
-	MVCの用い方の違い
-	一般的な「controller+action」をMagicWeaponのmodelに落とす方法一案
-	mod_rewrite周り：URIからの推測について
 
+MagicWeaponにおけるDBアクセスの考え方
+	ORMは使わないよ、的な
+	「key」と「それ以外」で分けて考える
+	「PKを取得するSQL」と「１レコードを取得するdata_clump」というやり方について
+		data_clumpの発想の根底は「構造体」
+	単体の取得
+	いわゆる「コードテーブル」的
+	listの取得
+		１テーブルからの取得
+		joinっぽい状態からの取得
 
-いわゆる「入力→確認→完了」の作り方
-	画面遷移の流れ
-	data_clumpにvalidateをしてもらう
-	基本のvalidateでは対応しきれない時は？
-	テンプレートにエラーメッセージを書く
+データを持ちまわる1
+	modelにあるbag
 
 data_clumpについてもうちょいと
 	項目の追加の仕方
@@ -82,6 +75,39 @@ data_clumpについてもうちょいと
 	テンプレートエンジンとの連携関連
 	memcachedを使ってみる：data_clump.conf
 	insertとupdateで異なるvalidateをする
+
+いわゆる「入力→確認→完了」の作り方
+	画面遷移の流れ
+	data_clumpにvalidateをしてもらう
+	基本のvalidateでは対応しきれない時は？
+	テンプレートにエラーメッセージを書く
+
+いわゆる「検索→一覧→詳細」の作り方
+	画面遷移の流れ
+	動的なSQLの作り方
+	一覧の出し方
+	詳細Pageのパラメタ持ち回りの仕方＆出し方
+
+開発環境とステージング環境と本番環境を切り替える
+	切り替え方の提案：シンボリックリンクによる切り替え
+	どのconfigをどんな風に分離するか
+	configの書式、特に@includeについて
+	切り替えて動かす
+
+configファイル余談
+	「ディレクトリ」は/で終わるように書く
+	相対パスは、先頭１文字目は/にしない
+	*_wbpの意味
+	@includeで取り込む
+	スマフォとガラケーとPCとで設定を変える？
+
+--------------
+
+一般的なPHPフレームワークとの対比
+	MVCの用い方の違い
+	一般的な「controller+action」をMagicWeaponのmodelに落とす方法一案
+	mod_rewrite周り：URIからの推測について
+
 
 DIの話
 	DIっつかファクトリーなんだけどねぇ、的な話
@@ -93,6 +119,11 @@ DIの話
 		authenticationの実装オプション
 		autholizationをPHP sessionで実装する
 		autholizationの実装その他
+
+データを持ちまわる2
+	sessionとbagの違い
+	mw_area_setting(推奨できるかは微妙だけど)
+	sessionでのデータの持ち回り
 
 「認証してもしなくてもよい」画面の作成
 
@@ -112,4 +143,8 @@ viewクラスの継承
 SQLの書き方とSQL-Injectionのお話
 
 CSRFの防ぎ方の提案
+
+開発手法
+	gitに登録する方法とか
+	DBが変更になったときに、どうやってdata_clumpとか変更するの？ 的手順
 
